@@ -6,3 +6,7 @@ export const Container = styled.div`
   height: 100%;
   background-color: #fff;
 `;
+
+export const TextNeoComics = styled.p`
+  color: #2d3748;
+`;

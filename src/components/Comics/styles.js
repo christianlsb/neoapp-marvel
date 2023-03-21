@@ -1,9 +1,26 @@
 import styled from 'styled-components';
 
 export const CardHq = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 200px;
-  &.finished {
+  margin-top: 20px;
+  &.isRare {
     background-color: red;
+  }
+  button {
+    border: none;
+    background-color: rgb(58, 186, 238);
+    color: white;
+    width: 180px;
+    margin-top: 5px;
+    border-radius: 5px;
+    height: 32px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 `;
 
