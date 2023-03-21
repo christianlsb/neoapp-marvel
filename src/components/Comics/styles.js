@@ -14,7 +14,7 @@ export const CardHq = styled.div`
     background-color: rgb(58, 186, 238);
     color: white;
     width: 180px;
-    margin-top: 5px;
+    margin-top: 10px;
     border-radius: 5px;
     height: 32px;
     cursor: pointer;

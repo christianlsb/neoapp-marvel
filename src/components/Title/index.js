@@ -2,10 +2,21 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import * as S from './styles';
-export const Title = ({ children, fontSize, fontWeight, color }) => {
+export const Title = ({
+  children,
+  fontSize,
+  marginBottom,
+  fontWeight,
+  color,
+}) => {
   return (
     <>
-      <S.Title color={color} fontWeight={fontWeight} fontSize={fontSize}>
+      <S.Title
+        marginBottom={marginBottom}
+        color={color}
+        fontWeight={fontWeight}
+        fontSize={fontSize}
+      >
         {children}
       </S.Title>
     </>
@@ -17,4 +28,5 @@ Title.propTypes = {
   fontSize: PropTypes.string,
   fontWeight: PropTypes.string,
   color: PropTypes.string,
+  marginBottom: PropTypes.string,
 };
