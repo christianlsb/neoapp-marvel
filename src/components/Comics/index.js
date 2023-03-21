@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Title } from '../';
 import { getHqList } from '../../services/api';
 import * as S from './styles';
 export const Comics = () => {
   const [hqList, setHqList] = useState([]);
-  console.log(hqList);
   useEffect(() => {
     getHqList().then(result => {
       const updatedHqList = result.map(hq => {
@@ -32,7 +32,9 @@ export const Comics = () => {
             src={`${hq.thumbnail.path}.${hq.thumbnail.extension}`}
             alt={hq.title}
           />
-          <button>Get</button>
+          <Link to={`/comics/${hq.id}`}>
+            <button>Get</button>
+          </Link>
         </S.CardHq>
       ))}
     </S.ContainerCardHq>

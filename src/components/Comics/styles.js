@@ -27,6 +27,7 @@ export const CardHq = styled.div`
 export const ImageCardHq = styled.img`
   width: 200px;
   height: 265px;
+  border-radius: 10px;
 `;
 
 export const ContainerCardHq = styled.div`
