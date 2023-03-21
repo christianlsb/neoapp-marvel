@@ -8,7 +8,7 @@ export const Header = () => {
     <>
       <S.Container>
         <Title fontWeight={'500'} color="white" fontSize={'14px'}>
-          NeoApp
+          NeoApp - Comics
         </Title>
       </S.Container>
     </>
