@@ -1,14 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export const Title = ({ children }) => {
+import * as S from './styles';
+export const Title = ({ children, fontSize, fontWeight, color }) => {
   return (
     <>
-      <h1>{children}</h1>
+      <S.Title color={color} fontWeight={fontWeight} fontSize={fontSize}>
+        {children}
+      </S.Title>
     </>
   );
 };
 
 Title.propTypes = {
   children: PropTypes.string,
+  fontSize: PropTypes.string,
+  fontWeight: PropTypes.string,
+  color: PropTypes.string,
 };
