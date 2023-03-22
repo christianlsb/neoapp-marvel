@@ -3,7 +3,7 @@ import md5 from 'md5';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { Header, Button, Title } from '../../components';
+import { Button, Title } from '../../components';
 import * as S from './styles';
 const publicKey = 'b00c558ed1d9824a6aa4c9511f831763';
 const privateKey = '4029a0c699e40af7dbe0685b39f3cef2367276fe';
@@ -50,7 +50,6 @@ export const Comic = () => {
     <>
       {comic ? (
         <S.Container>
-          <Header />
           <S.ContainerHq>
             <div className="displayPhone">
               <Title fontSize={'16px'}>{comic.title}</Title>

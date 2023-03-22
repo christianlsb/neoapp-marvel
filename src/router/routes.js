@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { Home, Comic, Cart } from '../containers/';
+import { Home, ComicDetails, Cart } from '../containers/';
 export default function RoutesApp() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route exact path="/:id" element={<Comic />} />
+        <Route exact path="/:id" element={<ComicDetails />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>

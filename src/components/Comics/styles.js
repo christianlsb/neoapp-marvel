@@ -31,5 +31,5 @@ export const ContainerCardHq = styled.div`
 export const LoaderContainer = styled.div`
   display: flex;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 300px;
 `;
