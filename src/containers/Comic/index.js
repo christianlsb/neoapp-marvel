@@ -45,7 +45,7 @@ export const Comic = () => {
                 alt={comic.title}
               />
               {comic.description ? (
-                <p>{comic.description}</p>
+                <S.Description>{comic.description}</S.Description>
               ) : (
                 <p>Descrição não foi encontrada.</p>
               )}
@@ -58,6 +58,7 @@ export const Comic = () => {
                 Get
               </Button>
             </div>
+
             <div className="displayPc">
               <S.Image
                 className="image-hq"
