@@ -13,7 +13,7 @@ export const Header = () => {
             NeoApp
           </Title>
         </Link>
-        <Link style={{ textDecoration: 'none' }} to="/">
+        <Link style={{ textDecoration: 'none' }} to="/comics">
           <Title fontWeight={'500'} color="white" fontSize={'14px'}>
             Comics
           </Title>
