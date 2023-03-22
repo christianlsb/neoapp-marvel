@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { HiOutlineTrash } from 'react-icons/hi2';
+import { HiOutlineTrash, HiOutlineFaceFrown } from 'react-icons/hi2';
 
 import { Button, Header, Title } from '../../components';
 import * as S from './styles';
@@ -25,24 +25,31 @@ export const Cart = () => {
       <S.Container>
         <S.ContainerItemCart>
           <Title>Carrinho</Title>
-          {cart.map(hq => (
-            <S.ContainerItem key={hq.id}>
-              <div className="itens">
-                <img
-                  style={{ width: '65px', height: '80px' }}
-                  src={`${hq.thumbnail.path}.${hq.thumbnail.extension}`}
-                  alt={hq.title}
-                />
-                <S.TitleHq>{hq.title}</S.TitleHq>
-                <Button
-                  onClick={() => DeleteCard(hq.id)}
-                  backgroundColor={'transparent'}
-                >
-                  <HiOutlineTrash size={25} />
-                </Button>
-              </div>
-            </S.ContainerItem>
-          ))}
+          {cart.length > 0 ? (
+            cart.map(hq => (
+              <S.ContainerItem key={hq.id}>
+                <div className="itens">
+                  <img
+                    style={{ width: '65px', height: '80px' }}
+                    src={`${hq.thumbnail.path}.${hq.thumbnail.extension}`}
+                    alt={hq.title}
+                  />
+                  <S.TitleHq>{hq.title}</S.TitleHq>
+                  <Button
+                    onClick={() => DeleteCard(hq.id)}
+                    backgroundColor={'transparent'}
+                  >
+                    <HiOutlineTrash size={25} />
+                  </Button>
+                </div>
+              </S.ContainerItem>
+            ))
+          ) : (
+            <S.ContainerEmpaty>
+              <HiOutlineFaceFrown size={50} color={'red'} />
+              <p>O carrinho está vázio</p>
+            </S.ContainerEmpaty>
+          )}
           <S.InputCupon placeholder="Insira seu cupom" />
           <Button
             backgroundColor={'blue'}

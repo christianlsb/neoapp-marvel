@@ -41,3 +41,9 @@ export const TitleHq = styled.p`
   text-align: center;
   padding-right: 5px;
 `;
+
+export const ContainerEmpaty = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
