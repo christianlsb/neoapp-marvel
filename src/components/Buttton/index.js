@@ -27,7 +27,7 @@ export const Button = ({
 };
 
 Button.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node.isRequired,
   backgroundColor: PropTypes.string,
   Color: PropTypes.string,
   Width: PropTypes.string,
