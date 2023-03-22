@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
+import { HiOutlineTrash } from 'react-icons/hi2';
 
 import { Button, Header, Title } from '../../components';
 import * as S from './styles';
@@ -11,6 +12,12 @@ export const Cart = () => {
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
     setCart(storedCart);
   }, []);
+
+  const DeleteCard = id => {
+    const updatedCart = cart.filter(task => task.id !== id);
+    setCart(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+  };
 
   return (
     <>
@@ -27,6 +34,12 @@ export const Cart = () => {
                   alt={hq.title}
                 />
                 <S.TitleHq>{hq.title}</S.TitleHq>
+                <Button
+                  onClick={() => DeleteCard(hq.id)}
+                  backgroundColor={'transparent'}
+                >
+                  <HiOutlineTrash size={25} />
+                </Button>
               </div>
             </S.ContainerItem>
           ))}

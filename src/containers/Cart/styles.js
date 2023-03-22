@@ -39,4 +39,5 @@ export const TitleHq = styled.p`
   padding-left: 5px;
   font-size: 14px;
   text-align: center;
+  padding-right: 5px;
 `;
