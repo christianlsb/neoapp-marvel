@@ -27,3 +27,9 @@ export const ContainerCardHq = styled.div`
     justify-items: center;
   }
 `;
+
+export const LoaderContainer = styled.div`
+  display: flex;
+  margin: auto;
+  margin-top: 150px;
+`;
