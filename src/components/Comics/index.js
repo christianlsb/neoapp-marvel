@@ -32,7 +32,7 @@ export const Comics = () => {
             src={`${hq.thumbnail.path}.${hq.thumbnail.extension}`}
             alt={hq.title}
           />
-          <Link to={`/comics/${hq.id}`}>
+          <Link to={`/${hq.id}`}>
             <button>Get</button>
           </Link>
         </S.CardHq>

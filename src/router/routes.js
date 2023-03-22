@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { Home, Comic } from '../containers/';
 export default function RoutesApp() {
@@ -7,8 +7,7 @@ export default function RoutesApp() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route exact path="/comics/:id" element={<Comic />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route exact path="/:id" element={<Comic />} />
       </Routes>
     </BrowserRouter>
   );
