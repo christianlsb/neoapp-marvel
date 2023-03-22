@@ -9,19 +9,6 @@ export const CardHq = styled.div`
   &.isRare {
     background-color: red;
   }
-  button {
-    border: none;
-    background-color: rgb(58, 186, 238);
-    color: white;
-    width: 180px;
-    margin-top: 10px;
-    border-radius: 5px;
-    height: 32px;
-    cursor: pointer;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
 `;
 
 export const ImageCardHq = styled.img`

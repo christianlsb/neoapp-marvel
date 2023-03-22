@@ -9,6 +9,8 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   .cart {
+    display: flex;
+    gap: 10px;
     padding-right: 5px;
   }
 `;

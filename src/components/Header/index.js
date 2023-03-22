@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoCartOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 import { Title } from '../Title';
 import * as S from './styles';
@@ -7,9 +8,17 @@ export const Header = () => {
   return (
     <>
       <S.Container>
-        <Title fontWeight={'500'} color="white" fontSize={'14px'}>
-          NeoApp - Comics
-        </Title>
+        <Link style={{ textDecoration: 'none' }} to="/">
+          <Title fontWeight={'500'} color="white" fontSize={'14px'}>
+            NeoApp
+          </Title>
+        </Link>
+        <Link style={{ textDecoration: 'none' }} to="/">
+          <Title fontWeight={'500'} color="white" fontSize={'14px'}>
+            Comics
+          </Title>
+        </Link>
+
         <div className="cart">
           <IoCartOutline color="white" size={20} />
         </div>

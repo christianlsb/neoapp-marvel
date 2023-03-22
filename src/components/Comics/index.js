@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 
 import { Title } from '../';
 import { getHqList } from '../../services/api';
+import { Button } from '../Buttton';
 import * as S from './styles';
+
 export const Comics = () => {
   const [hqList, setHqList] = useState([]);
   useEffect(() => {
@@ -33,7 +35,14 @@ export const Comics = () => {
             alt={hq.title}
           />
           <Link to={`/${hq.id}`}>
-            <button>Get</button>
+            <Button
+              backgroundColor={'rgb(58, 186, 238)'}
+              Width={'180px'}
+              Height={'32px'}
+              Color={'white'}
+            >
+              More Datails
+            </Button>
           </Link>
         </S.CardHq>
       ))}
