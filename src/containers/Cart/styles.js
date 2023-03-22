@@ -8,6 +8,7 @@ export const ContainerItemCart = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
   .itens {
     display: flex;
     padding: 15px;
@@ -27,4 +28,15 @@ export const ContainerItem = styled.div`
 
 export const InputCupon = styled.input`
   width: 300px;
+  height: 32px;
+  padding-left: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+`;
+
+export const TitleHq = styled.p`
+  padding-left: 5px;
+  font-size: 14px;
+  text-align: center;
 `;

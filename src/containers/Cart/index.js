@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
-import { Header, Title } from '../../components';
+import { Button, Header, Title } from '../../components';
 import * as S from './styles';
 
 export const Cart = () => {
@@ -16,23 +16,30 @@ export const Cart = () => {
     <>
       <Header />
       <S.Container>
-        <Title>Carrinho</Title>
         <S.ContainerItemCart>
-          {cart.map(item => (
-            <S.ContainerItem key={item.id}>
+          <Title>Carrinho</Title>
+          {cart.map(hq => (
+            <S.ContainerItem key={hq.id}>
               <div className="itens">
                 <img
                   style={{ width: '65px', height: '80px' }}
-                  src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
-                  alt={item.title}
+                  src={`${hq.thumbnail.path}.${hq.thumbnail.extension}`}
+                  alt={hq.title}
                 />
-                <p>{item.title}</p>
-                <p>{item.price}</p>
+                <S.TitleHq>{hq.title}</S.TitleHq>
               </div>
             </S.ContainerItem>
           ))}
+          <S.InputCupon placeholder="Insira seu cupom" />
+          <Button
+            backgroundColor={'blue'}
+            Height="34px"
+            Color={'white'}
+            Width={'120px'}
+          >
+            Aplicar
+          </Button>
         </S.ContainerItemCart>
-        <S.InputCupon placeholder="Insira seu cupom" />
       </S.Container>
     </>
   );
