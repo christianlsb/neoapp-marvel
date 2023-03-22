@@ -23,7 +23,7 @@ export const Cart = () => {
               <div className="itens">
                 <img
                   style={{ width: '65px', height: '80px' }}
-                  src={item.image}
+                  src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
                   alt={item.title}
                 />
                 <p>{item.title}</p>
