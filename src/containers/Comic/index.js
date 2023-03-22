@@ -32,6 +32,7 @@ export const Comic = () => {
         console.log(error);
       });
   }, [id]);
+  console.log(comic);
   return (
     <>
       {comic ? (
@@ -67,7 +68,11 @@ export const Comic = () => {
               />
               <div className="divFlex">
                 <Title fontSize={'1.3em'}>{comic.title}</Title>
-                <S.Description>{comic.description}</S.Description>
+                {comic.description ? (
+                  <S.Description>{comic.description}</S.Description>
+                ) : (
+                  <p>Descrição não foi encontrada.</p>
+                )}
                 <Button
                   backgroundColor={'rgb(58, 186, 238)'}
                   Width={'180px'}

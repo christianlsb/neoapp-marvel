@@ -35,6 +35,8 @@ export const ContainerHq = styled.div`
     flex-direction: row;
     .displayPc {
       display: flex;
+      margin-left: auto;
+      margin-right: auto;
     }
     .displayPhone {
       display: none;

@@ -19,9 +19,11 @@ export const Header = () => {
           </Title>
         </Link>
 
-        <div className="cart">
-          <IoCartOutline color="white" size={20} />
-        </div>
+        <Link to="/cart">
+          <div className="cart">
+            <IoCartOutline color="white" size={20} />
+          </div>
+        </Link>
       </S.Container>
     </>
   );
