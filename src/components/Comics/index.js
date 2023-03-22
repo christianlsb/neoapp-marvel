@@ -56,7 +56,7 @@ export const Comics = () => {
                 src={`${hq.thumbnail.path}.${hq.thumbnail.extension}`}
                 alt={hq.title}
               />
-              <Link to={`/${hq.id}`}>
+              <Link to={`/comics/${hq.id}`}>
                 <Button
                   backgroundColor={'rgb(58, 186, 238)'}
                   Width={'180px'}
