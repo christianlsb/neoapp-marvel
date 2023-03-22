@@ -41,7 +41,7 @@ export const Comics = () => {
               Height={'32px'}
               Color={'white'}
             >
-              More Datails
+              Mais Detalhes
             </Button>
           </Link>
         </S.CardHq>

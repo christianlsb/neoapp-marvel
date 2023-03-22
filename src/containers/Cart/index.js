@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header } from '../../components';
+import { Header, Title } from '../../components';
 import * as S from './styles';
 
 export const Cart = () => {
@@ -8,7 +8,7 @@ export const Cart = () => {
     <>
       <Header />
       <S.Container>
-        <h1>Cart</h1>
+        <Title>Carrinho</Title>
       </S.Container>
     </>
   );

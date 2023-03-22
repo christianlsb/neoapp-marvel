@@ -56,7 +56,7 @@ export const Comic = () => {
                 Height={'32px'}
                 Color={'white'}
               >
-                Get
+                Adicionar ao Carrinho
               </Button>
             </div>
 
@@ -79,7 +79,7 @@ export const Comic = () => {
                   Height={'32px'}
                   Color={'white'}
                 >
-                  Get
+                  Adicionar ao Carrinho
                 </Button>
               </div>
             </div>
