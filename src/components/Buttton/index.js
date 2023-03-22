@@ -3,10 +3,18 @@ import React from 'react';
 
 import * as S from './styles';
 
-export const Button = ({ children, backgroundColor, Color, Width, Height }) => {
+export const Button = ({
+  children,
+  backgroundColor,
+  Color,
+  Width,
+  Height,
+  ...rest
+}) => {
   return (
     <>
       <S.Button
+        {...rest}
         Color={Color}
         Width={Width}
         Height={Height}

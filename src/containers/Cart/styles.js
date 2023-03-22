@@ -2,4 +2,29 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
+`;
+export const ContainerItemCart = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .itens {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+
+export const ContainerItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100px;
+  border: 1px solid gray;
+  border-radius: 5px;
+`;
+
+export const InputCupon = styled.input`
+  width: 300px;
 `;
