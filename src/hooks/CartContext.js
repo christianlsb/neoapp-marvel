@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
     const comicAlreadyInCart = storedCart.find(item => item.id === comic.id);
     if (comicAlreadyInCart) {
-      console.log('Essa comic já foi adicionada');
+      alert('Esse item já está no carrinho');
     } else {
       const updatedCart = [...storedCart, comic];
       setCart(updatedCart);
