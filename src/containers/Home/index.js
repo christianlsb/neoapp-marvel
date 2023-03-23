@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Button, Header, Footer, Carousel } from '../../components';
+import { Button, Header } from '../../components';
 import * as S from './styles';
 export const Home = () => {
   return (
@@ -12,14 +12,12 @@ export const Home = () => {
           <Button
             backgroundColor={'rgb(58, 186, 238)'}
             Width={'180px'}
-            Height={'32px'}
+            Height={'54px'}
             Color={'white'}
           >
             Acessar os Quadrinhos
           </Button>
         </Link>
-        <Carousel />
-        <Footer />
       </S.Container>
     </>
   );
