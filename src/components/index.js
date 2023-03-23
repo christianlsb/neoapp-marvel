@@ -4,3 +4,4 @@ export * from './ButtonComponent';
 export * from './Comic';
 export * from './CarouselHome';
 export * from './ResumeCart';
+export * from './CartComponent';

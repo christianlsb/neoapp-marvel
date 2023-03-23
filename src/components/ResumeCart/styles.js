@@ -19,6 +19,5 @@ export const ResumeCart = styled.div`
     color: white;
   }
   @media (min-width: 1200px) {
-    
   }
 `;
