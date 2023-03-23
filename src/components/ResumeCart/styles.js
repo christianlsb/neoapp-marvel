@@ -9,14 +9,14 @@ export const ResumeCart = styled.div`
   margin-bottom: 30px;
   padding-left: 15px;
   border-radius: 10px;
-  border: 1px solid gray;
+  background-color: white;
   gap: 15px;
   padding-top: 25px;
   h1 {
-    color: white;
+    color: black;
   }
   p {
-    color: white;
+    color: black;
   }
   @media (min-width: 1200px) {
   }

@@ -7,7 +7,7 @@ export const Form = styled.form`
 `;
 
 export const InputCupon = styled.input`
-  width: 300px;
+  width: 200px;
   height: 32px;
   padding-left: 15px;
   border-radius: 5px;

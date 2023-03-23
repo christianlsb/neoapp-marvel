@@ -33,12 +33,12 @@ export const ContainerItemCart = styled.div`
 
 export const ContainerItem = styled.div`
   display: flex;
+  background-color: white;
   flex-direction: column;
   width: 300px;
   height: 100px;
-  border: 1px solid gray;
 
-  border-radius: 5px;
+  border-radius: 15px;
   @media (min-width: 1200px) {
     width: 600px;
     height: 300px;
@@ -82,6 +82,9 @@ export const Image = styled.img`
 `;
 
 export const Checkout = styled.div`
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 15px;
   @media (min-width: 1200px) {
     align-items: center;
     margin-right: auto;
