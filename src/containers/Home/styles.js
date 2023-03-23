@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
+import ImageBg from '../../assets/comicHome.jpg';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 100vh;
-  background-color: #1a202c;
+  min-height: 90vh;
+  background-image: url(${ImageBg});
+  background-size: cover;
   align-items: center;
 `;
 
