@@ -14,7 +14,9 @@ export const Cart = () => {
         <Header />
         <S.Container>
           <S.ContainerItemCart>
-            <Title>Carrinho</Title>
+            <Title marginTop={'15px'} color={'rgb(58, 186, 238)'}>
+              Carrinho
+            </Title>
             {cart.map(hq => (
               <S.ContainerItem key={hq.id}>
                 <div className="itens">
@@ -52,7 +54,9 @@ export const Cart = () => {
         <Header />
         <S.Container>
           <S.ContainerItemCart>
-            <Title>Carrinho</Title>
+            <Title marginTop={'15px'} color={'rgb(58, 186, 238)'}>
+              Carrinho
+            </Title>
             <S.ContainerEmpaty>
               <HiOutlineFaceFrown size={50} color={'red'} />
               <p>O carrinho está vázio</p>

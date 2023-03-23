@@ -12,6 +12,7 @@ export const ContainerItemCart = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 15px;
+
   .itens {
     display: flex;
     padding: 15px;
@@ -43,10 +44,15 @@ export const TitleHq = styled.p`
   font-size: 14px;
   text-align: center;
   padding-right: 5px;
+  color: rgb(58, 186, 238);
 `;
 
 export const ContainerEmpaty = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  p {
+    color: white;
+    margin-top: 15px;
+  }
 `;
