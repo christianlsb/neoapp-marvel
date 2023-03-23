@@ -4,28 +4,17 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { Button, Title } from '../../components';
+import { useCart } from '../../hooks/CartContext';
 import * as S from './styles';
 const publicKey = 'b00c558ed1d9824a6aa4c9511f831763';
 const privateKey = '4029a0c699e40af7dbe0685b39f3cef2367276fe';
 const apiUrl = 'https://gateway.marvel.com/v1/public/comics';
 
 export const Comic = () => {
+  const { AddComicInCart } = useCart();
   const { id } = useParams();
   const [comic, setComic] = useState(null);
-  const [cart, setCart] = useState([]);
-  const addComicInCart = comic => {
-    const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
-    const comicAlreadyInCart = storedCart.find(item => item.id === comic.id);
-    if (comicAlreadyInCart) {
-      console.log('Essa comic já foi adicionada');
-    } else {
-      const updatedCart = [...storedCart, comic];
-      setCart(updatedCart);
-      localStorage.setItem('cart', JSON.stringify(updatedCart));
-    }
-  };
 
-  console.log(cart);
   useEffect(() => {
     const timestamp = Date.now().toString();
     const hash = md5(`${timestamp}${privateKey}${publicKey}`);
@@ -67,7 +56,7 @@ export const Comic = () => {
                 Width={'180px'}
                 Height={'32px'}
                 Color={'white'}
-                onClick={() => addComicInCart(comic)}
+                onClick={() => AddComicInCart(comic)}
               >
                 Adicionar ao Carrinho
               </Button>
@@ -91,7 +80,7 @@ export const Comic = () => {
                   Width={'180px'}
                   Height={'32px'}
                   Color={'white'}
-                  onClick={() => addComicInCart(comic)}
+                  onClick={() => AddComicInCart(comic)}
                 >
                   Adicionar ao Carrinho
                 </Button>

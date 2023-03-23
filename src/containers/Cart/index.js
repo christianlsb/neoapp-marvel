@@ -1,23 +1,12 @@
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { HiOutlineXMark, HiOutlineFaceFrown } from 'react-icons/hi2';
 
 import { Button, Header, Title } from '../../components';
+import { useCart } from '../../hooks/CartContext';
 import * as S from './styles';
-
 export const Cart = () => {
-  const [cart, setCart] = useState([]);
-
-  useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
-    setCart(storedCart);
-  }, []);
-
-  const DeleteCard = id => {
-    const updatedCart = cart.filter(task => task.id !== id);
-    setCart(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-  };
+  const { DeleteCard, cart } = useCart();
 
   if (cart.length > 0) {
     return (
