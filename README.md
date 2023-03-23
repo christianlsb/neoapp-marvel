@@ -35,6 +35,7 @@ Neste projeto foram utilizadas as seguintes ferramentas:
 - [Toast](https://fkhadra.github.io/react-toastify/introduction/)
 - [LocalStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage)
 - [React Icon](https://react-icons.github.io/react-icons/)
+- [React Query](https://tanstack.com/query/v3/)
 
 
 ## Problemas encontrandos no caminho
