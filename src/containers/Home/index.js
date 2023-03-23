@@ -1,14 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-// import MarvelBg from '../../assets/marvelC.jpg';
-import { Header } from '../../components';
-
+import { Button, Header } from '../../components';
+import Carousel from '../../components/CarouselHome';
+import * as S from './styles';
 export const Home = () => {
   return (
     <>
       <Header />
-      {/* <img src={MarvelBg} style={{ width: '100%' }} /> */}
-      <p></p>
+      <S.Container>
+        <Carousel />
+        <Link to={'/comics'}>
+          <Button
+            backgroundColor={'rgb(58, 186, 238)'}
+            Width={'180px'}
+            Height={'32px'}
+            Color={'white'}
+          >
+            Acessar os Quadrinhos
+          </Button>
+        </Link>
+      </S.Container>
     </>
   );
 };

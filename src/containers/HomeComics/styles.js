@@ -4,9 +4,5 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #fff;
-`;
-
-export const TextNeoComics = styled.p`
-  color: #2d3748;
+  background-color: #1a202c;
 `;

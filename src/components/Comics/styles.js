@@ -7,7 +7,6 @@ export const CardHq = styled.div`
   width: 200px;
   margin-top: 20px;
   &.isRare {
-    background-color: red;
   }
 `;
 
