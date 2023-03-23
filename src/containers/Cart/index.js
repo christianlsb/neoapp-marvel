@@ -33,6 +33,15 @@ export const Cart = () => {
                 </div>
               </S.ContainerItem>
             ))}
+            <S.InputCupon placeholder="Insira seu cupom" />
+            <Button
+              backgroundColor={'rgb(58, 186, 238)'}
+              Width={'180px'}
+              Height={'32px'}
+              Color={'white'}
+            >
+              Aplicar
+            </Button>
           </S.ContainerItemCart>
         </S.Container>
       </>

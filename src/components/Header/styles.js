@@ -20,7 +20,7 @@ export const Nav = styled.nav`
   display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   flex-direction: column;
   position: absolute;
-  top: 5%;
+  top: 35px;
   left: 0;
   width: 100%;
   background-color: rgb(58, 186, 238);

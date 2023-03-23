@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { createContext, useContext, useEffect, useState } from 'react';
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
@@ -15,18 +16,19 @@ export const CartProvider = ({ children }) => {
     const updatedCart = cart.filter(task => task.id !== id);
     setCart(updatedCart);
     localStorage.setItem('cart', JSON.stringify(updatedCart));
+    toast.success('HQ removida com sucesso!');
   };
 
   const AddComicInCart = comic => {
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
     const comicAlreadyInCart = storedCart.find(item => item.id === comic.id);
     if (comicAlreadyInCart) {
-      alert('Esse item já está no carrinho');
+      toast.error('HQ já está no carrinho!');
     } else {
       const updatedCart = [...storedCart, comic];
       setCart(updatedCart);
       localStorage.setItem('cart', JSON.stringify(updatedCart));
-      alert('Adicionao ao carrinho');
+      toast.success('HQ adicionada com sucesso!');
     }
   };
 
