@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ClipLoader } from 'react-spinners';
 
-import { Button, Title } from '../../components';
+import { ButtonComponent, Title } from '../../components';
 import { useCart } from '../../hooks/CartContext';
 import { getComicById } from '../../services/apiById';
 import * as S from './styles';
@@ -54,7 +54,7 @@ export const Comic = () => {
               ) : (
                 <p>Descrição não foi encontrada.</p>
               )}
-              <Button
+              <ButtonComponent
                 backgroundColor={'rgb(58, 186, 238)'}
                 Width={'180px'}
                 Height={'32px'}
@@ -62,7 +62,7 @@ export const Comic = () => {
                 onClick={() => AddComicInCart(comic)}
               >
                 Adicionar ao Carrinho
-              </Button>
+              </ButtonComponent>
             </div>
 
             <div className="displayPc">
@@ -80,7 +80,7 @@ export const Comic = () => {
                 ) : (
                   <p>Descrição não foi encontrada.</p>
                 )}
-                <Button
+                <ButtonComponent
                   backgroundColor={'rgb(58, 186, 238)'}
                   Width={'180px'}
                   Height={'32px'}
@@ -88,7 +88,7 @@ export const Comic = () => {
                   onClick={() => AddComicInCart(comic)}
                 >
                   Adicionar ao Carrinho
-                </Button>
+                </ButtonComponent>
               </div>
             </div>
           </S.ContainerHq>

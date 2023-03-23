@@ -5,7 +5,7 @@ import { ClipLoader } from 'react-spinners';
 
 import { Title } from '../';
 import { getHqList } from '../../services/api';
-import { Button } from '../Buttton';
+import { ButtonComponent } from '../ButtonComponent';
 import * as S from './styles';
 
 const loaderCss = css`
@@ -57,14 +57,14 @@ export const Comics = () => {
                 alt={hq.title}
               />
               <Link to={`/comics/${hq.id}`}>
-                <Button
+                <ButtonComponent
                   backgroundColor={'rgb(58, 186, 238)'}
                   Width={'180px'}
                   Height={'32px'}
                   Color={'white'}
                 >
                   Mais Detalhes
-                </Button>
+                </ButtonComponent>
               </Link>
             </S.CardHq>
           ))}

@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { HiOutlineXMark, HiOutlineFaceFrown } from 'react-icons/hi2';
 
-import { Button, Header, Title } from '../../components';
+import { ButtonComponent, Header, ResumeCart, Title } from '../../components';
+import CupomInput from '../../components/InputCupom';
 import { useCart } from '../../hooks/CartContext';
 import * as S from './styles';
 export const Cart = () => {
@@ -20,31 +21,27 @@ export const Cart = () => {
             {cart.map(hq => (
               <S.ContainerItem key={hq.id}>
                 <div className="itens">
-                  <img
-                    style={{ width: '65px', height: '80px' }}
+                  <S.Image
                     src={`${hq.thumbnail.path}.${hq.thumbnail.extension}`}
                     alt={hq.title}
                   />
                   <S.TitleHq>{hq.title}</S.TitleHq>
-                  <Button
+                  <ButtonComponent
                     onClick={() => DeleteCard(hq.id)}
                     backgroundColor={'transparent'}
                   >
-                    <HiOutlineXMark color="red" size={25} />
-                  </Button>
+                    <div className="divDeleteIten">
+                      <HiOutlineXMark color="red" />
+                    </div>
+                  </ButtonComponent>
                 </div>
               </S.ContainerItem>
             ))}
-            <S.InputCupon placeholder="Insira seu cupom" />
-            <Button
-              backgroundColor={'rgb(58, 186, 238)'}
-              Width={'180px'}
-              Height={'32px'}
-              Color={'white'}
-            >
-              Aplicar
-            </Button>
           </S.ContainerItemCart>
+          <S.Checkout>
+            <ResumeCart />
+            <CupomInput />
+          </S.Checkout>
         </S.Container>
       </>
     );

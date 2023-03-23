@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Button, Header } from '../../components';
+import { ButtonComponent, Header } from '../../components';
 import * as S from './styles';
 export const Home = () => {
   return (
@@ -9,14 +9,14 @@ export const Home = () => {
       <Header />
       <S.Container>
         <Link to={'/comics'}>
-          <Button
+          <ButtonComponent
             backgroundColor={'rgb(58, 186, 238)'}
             Width={'180px'}
             Height={'54px'}
             Color={'white'}
           >
             Acessar os Quadrinhos
-          </Button>
+          </ButtonComponent>
         </Link>
       </S.Container>
     </>
