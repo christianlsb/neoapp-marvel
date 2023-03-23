@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Button, Header } from '../../components';
-import Carousel from '../../components/CarouselHome';
+import { Button, Header, Carousel } from '../../components';
 import * as S from './styles';
 export const Home = () => {
   return (

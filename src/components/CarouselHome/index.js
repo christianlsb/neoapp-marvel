@@ -8,7 +8,7 @@ import * as S from './styles';
 
 const images = [Comic1, Comic2, Comic3, Comic4];
 
-const Carousel = () => {
+export const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -34,4 +34,3 @@ const Carousel = () => {
     </S.Container>
   );
 };
-export default Carousel;
