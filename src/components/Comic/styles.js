@@ -30,6 +30,10 @@ export const ContainerHq = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 15px;
+    p {
+      color: white;
+    }
   }
   .displayPc {
     display: none;
@@ -50,6 +54,9 @@ export const ContainerHq = styled.div`
       align-items: center;
       margin-top: 15px;
       gap: 15px;
+      p {
+        color: white;
+      }
     }
     @media (min-width: 1440px) {
       .displayPc {
@@ -63,10 +70,20 @@ export const ContainerHq = styled.div`
 
 export const Description = styled.p`
   display: flex;
+  color: white;
   width: 280px;
   font-size: 0.9em;
   @media (min-width: 768px) {
     font-size: 1.2em;
     width: 500px;
   }
+`;
+
+export const LoaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  background-color: #1a202c;
 `;

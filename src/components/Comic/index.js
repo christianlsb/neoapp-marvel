@@ -1,5 +1,7 @@
+import { css } from '@emotion/react';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { ClipLoader } from 'react-spinners';
 
 import { Button, Title } from '../../components';
 import { useCart } from '../../hooks/CartContext';
@@ -10,23 +12,39 @@ export const Comic = () => {
   const { AddComicInCart } = useCart();
   const { id } = useParams();
   const [comic, setComic] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadComic = async () => {
       const comic = await getComicById(id);
       setComic(comic);
+      setLoading(false);
     };
 
     loadComic();
   }, [id]);
-
+  const loaderCss = css`
+    display: block;
+    margin: 0 auto;
+  `;
   return (
     <>
-      {comic ? (
+      {loading ? (
+        <S.LoaderContainer>
+          <ClipLoader
+            color={'#3abaee'}
+            loading={loading}
+            css={loaderCss}
+            size={100}
+          />
+        </S.LoaderContainer>
+      ) : (
         <S.Container>
           <S.ContainerHq>
             <div className="displayPhone">
-              <Title fontSize={'16px'}>{comic.title}</Title>
+              <Title color={'#3abaee'} fontSize={'16px'}>
+                {comic.title}
+              </Title>
               <S.Image
                 src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
                 alt={comic.title}
@@ -54,7 +72,9 @@ export const Comic = () => {
                 alt={comic.title}
               />
               <div className="divFlex">
-                <Title fontSize={'1.3em'}>{comic.title}</Title>
+                <Title color={'#3abaee'} fontSize={'1.3em'}>
+                  {comic.title}
+                </Title>
                 {comic.description ? (
                   <S.Description>{comic.description}</S.Description>
                 ) : (
@@ -73,8 +93,6 @@ export const Comic = () => {
             </div>
           </S.ContainerHq>
         </S.Container>
-      ) : (
-        <p>Carregando Hq...</p>
       )}
     </>
   );
