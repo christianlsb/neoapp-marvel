@@ -30,7 +30,7 @@ O site é composto por 4 páginas diferentes:
 Neste projeto foram utilizadas as seguintes ferramentas:
 
 - [ReactJs](https://pt-br.reactjs.org/)
-- [Styled-Components] (https://styled-components.com/)
+- [Styled-Components](https://styled-components.com/)
 - [Axios](https://axios-http.com/docs/intro)
 - [Toast](https://fkhadra.github.io/react-toastify/introduction/)
 - [LocalStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage)
