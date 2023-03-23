@@ -6,6 +6,7 @@ export const Title = ({
   children,
   fontSize,
   marginBottom,
+  marginTop,
   fontWeight,
   color,
 }) => {
@@ -16,6 +17,7 @@ export const Title = ({
         color={color}
         fontWeight={fontWeight}
         fontSize={fontSize}
+        marginTop={marginTop}
       >
         {children}
       </S.Title>
@@ -24,9 +26,10 @@ export const Title = ({
 };
 
 Title.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node.isRequired,
   fontSize: PropTypes.string,
   fontWeight: PropTypes.string,
   color: PropTypes.string,
   marginBottom: PropTypes.string,
+  marginTop: PropTypes.string,
 };
