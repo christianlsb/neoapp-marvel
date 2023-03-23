@@ -36,4 +36,11 @@ Neste projeto foram utilizadas as seguintes ferramentas:
 - [LocalStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage)
 - [React Icon](https://react-icons.github.io/react-icons/)
 
+
+## Problemas encontrandos no caminho
+
+Neste projeto tive um grande desafio em relação a api, pois não consumi ela como queria, por exemplo, details, images ands price das comics não foram possíveis ser requisitas na api, por causa de bugs ou até mesmo eu não sabia como fazer. 
+
+Outro desafio porém com um final feliz foi a utilização de um context criado por mim, estou me referindo ao CartContext, onde consegui fazer a utilização em vários pontos desta aplicação.
+
 <a href="#top">Volte para o Topo</a>
