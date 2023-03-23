@@ -26,6 +26,7 @@ export const CartProvider = ({ children }) => {
       const updatedCart = [...storedCart, comic];
       setCart(updatedCart);
       localStorage.setItem('cart', JSON.stringify(updatedCart));
+      alert('Adicionao ao carrinho');
     }
   };
 
