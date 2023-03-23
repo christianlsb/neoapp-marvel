@@ -1,12 +1,14 @@
 import React from 'react';
 
+// import MarvelBg from '../../assets/marvelC.jpg';
 import { Header } from '../../components';
 
 export const Home = () => {
   return (
     <>
       <Header />
-      <h1>Home</h1>
+      {/* <img src={MarvelBg} style={{ width: '100%' }} /> */}
+      <p></p>
     </>
   );
 };
