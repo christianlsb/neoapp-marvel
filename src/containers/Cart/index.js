@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { HiOutlineTrash, HiOutlineFaceFrown } from 'react-icons/hi2';
+import { HiOutlineXMark, HiOutlineFaceFrown } from 'react-icons/hi2';
 
 import { Button, Header, Title } from '../../components';
 import * as S from './styles';
@@ -19,14 +19,14 @@ export const Cart = () => {
     localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
 
-  return (
-    <>
-      <Header />
-      <S.Container>
-        <S.ContainerItemCart>
-          <Title>Carrinho</Title>
-          {cart.length > 0 ? (
-            cart.map(hq => (
+  if (cart.length > 0) {
+    return (
+      <>
+        <Header />
+        <S.Container>
+          <S.ContainerItemCart>
+            <Title>Carrinho</Title>
+            {cart.map(hq => (
               <S.ContainerItem key={hq.id}>
                 <div className="itens">
                   <img
@@ -39,30 +39,31 @@ export const Cart = () => {
                     onClick={() => DeleteCard(hq.id)}
                     backgroundColor={'transparent'}
                   >
-                    <HiOutlineTrash size={25} />
+                    <HiOutlineXMark color="red" size={25} />
                   </Button>
                 </div>
               </S.ContainerItem>
-            ))
-          ) : (
+            ))}
+          </S.ContainerItemCart>
+        </S.Container>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Header />
+        <S.Container>
+          <S.ContainerItemCart>
+            <Title>Carrinho</Title>
             <S.ContainerEmpaty>
               <HiOutlineFaceFrown size={50} color={'red'} />
               <p>O carrinho está vázio</p>
             </S.ContainerEmpaty>
-          )}
-          <S.InputCupon placeholder="Insira seu cupom" />
-          <Button
-            backgroundColor={'blue'}
-            Height="34px"
-            Color={'white'}
-            Width={'120px'}
-          >
-            Aplicar
-          </Button>
-        </S.ContainerItemCart>
-      </S.Container>
-    </>
-  );
+          </S.ContainerItemCart>
+        </S.Container>
+      </>
+    );
+  }
 };
 
 Cart.propTypes = {
