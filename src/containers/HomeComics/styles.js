@@ -5,4 +5,6 @@ export const Container = styled.div`
   flex-direction: column;
   height: 100%;
   background-color: #1a202c;
+  height: 100%;
+  min-height: 100vh;
 `;
