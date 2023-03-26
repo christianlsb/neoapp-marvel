@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import ImageBg from '../../assets/comicHome.jpg';
+import { themes } from '../../styles/theme';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -13,5 +14,5 @@ export const Container = styled.div`
 `;
 
 export const TextNeoComics = styled.p`
-  color: white;
+  color: ${themes.colors.white};
 `;

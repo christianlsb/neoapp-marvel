@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
+import { themes } from '../../styles/theme';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #1a202c;
+  background-color: ${themes.colors.background};
 `;
 
 export const Image = styled.img`
   width: 200px;
   height: 302px;
-  border: 1px solid #fff;
+  border: 1px solid ${themes.colors.white};
   margin: 15px;
   border-radius: 15px;
   @media (min-width: 1440px) {

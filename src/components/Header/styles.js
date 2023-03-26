@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
+import { themes } from '../../styles/theme';
 export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(58, 186, 238);
+  background-color: ${themes.colors.default_color};
   padding: 10px 20px;
 `;
 
@@ -23,12 +25,12 @@ export const Nav = styled.nav`
   top: 14px;
   left: 0;
   width: 100%;
-  background-color: rgb(58, 186, 238);
+  background-color: ${themes.colors.default_color};
   padding: 20px;
 `;
 
 export const NavItem = styled(Link)`
-  color: #fff;
+  color: ${themes.colors.white};
   text-decoration: none;
   margin-bottom: 10px;
   font-size: 16px;
@@ -41,7 +43,7 @@ export const NavItem = styled(Link)`
 export const CartButton = styled(Link)`
   display: flex;
   align-items: center;
-  color: #fff;
+  color: ${themes.colors.white};
   text-decoration: none;
   font-size: 20px;
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
+import { themes } from '../../styles/theme';
 import { ButtonComponent } from '../ButtonComponent';
 import * as S from './styles';
 import 'react-toastify/dist/ReactToastify.css';
@@ -34,7 +35,7 @@ const CupomInput = () => {
         />
       </label>
       <ButtonComponent
-        backgroundColor={'rgb(58, 186, 238)'}
+        backgroundColor={themes.colors.default_color}
         Width={'180px'}
         Height={'32px'}
         Color={'white'}

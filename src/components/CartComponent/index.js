@@ -2,9 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { HiOutlineXMark, HiOutlineFaceFrown } from 'react-icons/hi2';
 
+import { useCart } from '../../hooks/CartContext';
+import { themes } from '../../styles/theme';
+
 import { ButtonComponent, ResumeCart, Title } from '..';
 
-import { useCart } from '../../hooks/CartContext';
 import CupomInput from '../InputCupom';
 import * as S from './styles';
 export const CartComponent = () => {
@@ -15,7 +17,7 @@ export const CartComponent = () => {
       <>
         <S.Container>
           <S.ContainerItemCart>
-            <Title marginTop={'15px'} color={'rgb(58, 186, 238)'}>
+            <Title marginTop={'15px'} color={themes.colors.default_color}>
               Carrinho
             </Title>
             {cart.map(hq => (
@@ -50,7 +52,7 @@ export const CartComponent = () => {
       <>
         <S.Container>
           <S.ContainerItemCart>
-            <Title marginTop={'15px'} color={'rgb(58, 186, 238)'}>
+            <Title marginTop={'15px'} color={themes.colors.default_color}>
               Carrinho
             </Title>
             <S.ContainerEmpaty>

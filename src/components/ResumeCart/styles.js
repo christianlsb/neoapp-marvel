@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import { themes } from '../../styles/theme';
 export const ResumeCart = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,14 +10,14 @@ export const ResumeCart = styled.div`
   margin-bottom: 30px;
   padding-left: 15px;
   border-radius: 10px;
-  background-color: white;
+  background-color: ${themes.colors.white};
   gap: 15px;
   padding-top: 25px;
   h1 {
-    color: black;
+    color: ${themes.colors.default_color};
   }
   p {
-    color: black;
+    color: ${themes.colors.default_color};
   }
   @media (min-width: 1200px) {
   }

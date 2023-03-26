@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 
+import { themes } from '../../styles/theme';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
-  background-color: #1a202c;
+  background-color: ${themes.colors.background};
 `;
 
 export const Image = styled.img`
   width: 200px;
   height: 302px;
-  border: 1px solid #000;
+  border: 1px solid ${themes.colors.black};
   margin: 15px;
   border-radius: 15px;
   @media (min-width: 1440px) {
@@ -70,7 +71,7 @@ export const ContainerHq = styled.div`
 
 export const Description = styled.p`
   display: flex;
-  color: white;
+  color: ${themes.colors.white};
   width: 280px;
   font-size: 0.9em;
   @media (min-width: 768px) {
@@ -85,5 +86,5 @@ export const LoaderContainer = styled.div`
   width: 100%;
   height: 100vh;
   align-items: center;
-  background-color: #1a202c;
+  background-color: ${themes.colors.background};
 `;

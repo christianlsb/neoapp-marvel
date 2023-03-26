@@ -7,8 +7,8 @@ import { ClipLoader } from 'react-spinners';
 import { ButtonComponent, Title } from '../../components';
 import { useCart } from '../../hooks/CartContext';
 import { getComicById } from '../../services/apiById';
+import { themes } from '../../styles/theme';
 import * as S from './styles';
-
 export const Comic = () => {
   const { AddComicInCart } = useCart();
   const { id } = useParams();
@@ -29,7 +29,7 @@ export const Comic = () => {
     return (
       <S.LoaderContainer>
         <ClipLoader
-          color={'#3abaee'}
+          color={themes.colors.default_color}
           loading={isLoading}
           css={loaderCss}
           size={100}
@@ -46,7 +46,7 @@ export const Comic = () => {
     <S.Container>
       <S.ContainerHq>
         <div className="displayPhone">
-          <Title color={'#3abaee'} fontSize={'16px'}>
+          <Title color={themes.colors.default_color} fontSize={'16px'}>
             {comic.title}
           </Title>
           <S.Image
@@ -59,7 +59,7 @@ export const Comic = () => {
             <p>Descrição não foi encontrada.</p>
           )}
           <ButtonComponent
-            backgroundColor={'rgb(58, 186, 238)'}
+            backgroundColor={themes.colors.default_color}
             Width={'180px'}
             Height={'32px'}
             Color={'white'}
@@ -76,7 +76,7 @@ export const Comic = () => {
             alt={comic.title}
           />
           <div className="divFlex">
-            <Title color={'#3abaee'} fontSize={'1.3em'}>
+            <Title color={themes.colors.default_color} fontSize={'1.3em'}>
               {comic.title}
             </Title>
             {comic.description ? (
@@ -85,7 +85,7 @@ export const Comic = () => {
               <p>Descrição não foi encontrada.</p>
             )}
             <ButtonComponent
-              backgroundColor={'rgb(58, 186, 238)'}
+              backgroundColor={themes.colors.default_color}
               Width={'180px'}
               Height={'32px'}
               Color={'white'}

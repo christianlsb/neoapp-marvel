@@ -6,6 +6,7 @@ import { ClipLoader } from 'react-spinners';
 
 import { Title } from '../';
 import { getHqList } from '../../services/api';
+import { themes } from '../../styles/theme';
 import { ButtonComponent } from '../ButtonComponent';
 import * as S from './styles';
 
@@ -21,7 +22,7 @@ export const Comics = () => {
     return (
       <S.LoaderContainer>
         <ClipLoader
-          color={'#3abaee'}
+          color={themes.colors.default_color}
           loading={isLoading}
           css={loaderCss}
           size={100}
@@ -37,7 +38,7 @@ export const Comics = () => {
           <Title
             fontWeight={'500'}
             fontSize={'16px'}
-            color={'rgb(58, 186, 238)'}
+            color={themes.colors.default_color}
             marginBottom={'8px'}
           >
             {hq.title}
@@ -48,7 +49,7 @@ export const Comics = () => {
           />
           <Link to={`/comics/${hq.id}`}>
             <ButtonComponent
-              backgroundColor={'rgb(58, 186, 238)'}
+              backgroundColor={themes.colors.default_color}
               Width={'180px'}
               Height={'32px'}
               Color={'white'}

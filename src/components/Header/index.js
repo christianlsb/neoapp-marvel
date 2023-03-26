@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { IoCartOutline, IoMenuOutline } from 'react-icons/io5';
 
+import { themes } from '../../styles/theme';
 import * as S from './styles';
-
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <S.Container>
       <S.MenuButton onClick={toggleMenu}>
-        <IoMenuOutline color="#fff" size={20} />
+        <IoMenuOutline color={themes.colors.white} size={20} />
       </S.MenuButton>
       <S.Nav isOpen={isOpen}>
         <S.NavItem to="/" onClick={toggleMenu}>

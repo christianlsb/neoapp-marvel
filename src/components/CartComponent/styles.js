@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
+import { themes } from '../../styles/theme';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #1a202c;
+  background-color: ${themes.colors.background};
   height: 100%;
   min-height: 100vh;
   align-items: center;
@@ -33,7 +34,7 @@ export const ContainerItemCart = styled.div`
 
 export const ContainerItem = styled.div`
   display: flex;
-  background-color: white;
+  background-color: ${themes.colors.white};
   flex-direction: column;
   width: 300px;
   height: 100px;
@@ -56,7 +57,7 @@ export const TitleHq = styled.p`
   font-size: 14px;
   text-align: center;
   padding-right: 5px;
-  color: rgb(58, 186, 238);
+  color: ${themes.colors.default_color};
   @media (min-width: 1200px) {
     font-size: 32px;
   }
@@ -67,7 +68,7 @@ export const ContainerEmpaty = styled.div`
   flex-direction: column;
   align-items: center;
   p {
-    color: white;
+    color: ${themes.colors.white};
     margin-top: 15px;
   }
 `;
@@ -82,7 +83,7 @@ export const Image = styled.img`
 `;
 
 export const Checkout = styled.div`
-  background-color: white;
+  background-color: ${themes.colors.white};
   border-radius: 15px;
   margin-top: 15px;
   @media (min-width: 1200px) {
